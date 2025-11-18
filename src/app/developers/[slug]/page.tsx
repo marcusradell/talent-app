@@ -1,4 +1,4 @@
-import CvWrapper from "@/features/developer-profiles/components/cv/cv-wrapper";
+import { CvWrapper } from "@/features/developer-profiles";
 
 type Props = {
   params: Promise<{ slug: string }>;
