@@ -7,9 +7,7 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
-export default async function Page({ params }: Props) {
-  const { slug } = await params;
-
+function Developer({ slug }: { slug: string }) {
   return (
     <Suspense fallback={<CvLoading />}>
       <BlurFade delay={0.25} inView>
@@ -17,4 +15,10 @@ export default async function Page({ params }: Props) {
       </BlurFade>
     </Suspense>
   );
+}
+
+export default async function Page({ params }: Props) {
+  const { slug } = await params;
+
+  return <Developer slug={slug} />;
 }
