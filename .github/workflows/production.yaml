@@ -5,7 +5,7 @@ env:
 on:
   push:
     branches:
-      - main
+      - __main__temporarily__deactivated
 jobs:
   Deploy:
     environment: production
