@@ -3,11 +3,11 @@ import { Suspense } from "react";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import CvLoading from "./loading";
 
-type Params = {
+type Props = {
   params: Promise<{ slug: string }>;
 };
 
-export default async function Page({ params }: Params) {
+export default async function Page({ params }: Props) {
   const { slug } = await params;
 
   return (
