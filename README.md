@@ -32,9 +32,9 @@ npm run dev
     •	This is for reading public data only. You don’t need to select any scopes.
     •	Copy your token – it will only be displayed once. Make sure to save it securely.
 
-## Setting Up Clerk
-
-    •	Navigate to config > session.
+## Setting Up Clerk (Required)
+    •	Fill in the .env values.
+	•	Navigate to config > session.
     •	Click Edit Customize session token.
     •	Paste the following into the customized session:
 
