@@ -15,7 +15,7 @@ docker compose up
 npm i
 
 # Push database changes
-npm run db:push
+npm run db:migrate
 
 # Seed the database
 npm run seed
@@ -60,4 +60,12 @@ npm run dev
     •	Secure your API key by restricting it to specific IPs or referrers if needed.
 
 ## Feature slice connections
+This might be outdated, but general rule stays true.
+
+Dashboards are backend-for-frontends that should not own any business logic, but just use other features.
+
+The middle layer of features are normal domain-related features.
+
+The bottom layer is the identity and access management (IAM) feature. Since most domain features need access to the IAM feature, it's important that the IAM feature doesn't know about the domain features, since that would create circular dependencies. (IAM _does_ import *types* from the domain features to get type safe access management.)
+
 ![image](https://github.com/user-attachments/assets/0512bbd5-c9ce-4a8f-ad91-4f7adba53f55)
